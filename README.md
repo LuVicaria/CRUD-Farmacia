@@ -1,14 +1,5 @@
 # Farmácia - Projeto Final Bloco 02
 
-<br />
-
-<div align="center">
-   <img width="512" height="512" src="colocar imagem" title="source: imgur.com" /> 
-</div>
-
-
-<br /><br />
-
 ## 1. Descrição
 
 A FarmaBelle faz parte do Projeto Final Bloco 02 - Backend Java Spring Boot.

@@ -51,7 +51,7 @@ Para executar os códigos localmente, você precisará:
 1. Clone o repositório do Projeto farmacia dentro da pasta do *Workspace* do STS
 
 ```bash
-git clone https://github.com/misoliv/projeto_final_bloco_02
+git clone https://github.com/LuVicaria/CRUD-Farmacia
 ```
 
 2. **Abra o STS** e selecione a pasta do *Workspace* onde você clonou o repositório do projeto
@@ -77,7 +77,7 @@ git clone https://github.com/misoliv/projeto_final_bloco_02
 
 > [!TIP]
 >
-> Ao acessar a URL `http://localhost:8080` em seu navegador, a interface do Swagger será carregada automaticamente, permitindo a visualização e a interação com os endpoints da API, bem como a consulta dos modelos de dados utilizados.
+> Ao acessar a URL `http://localhost:8081` em seu navegador, a interface do Swagger será carregada automaticamente, permitindo a visualização e a interação com os endpoints da API, bem como a consulta dos modelos de dados utilizados.
 
 <br />
 

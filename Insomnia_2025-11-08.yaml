@@ -1,0 +1,345 @@
+type: collection.insomnia.rest/5.0
+name: Farmacia
+meta:
+  id: wrk_a8bd3500593c4b5c9e12d27f54ed6f86
+  created: 1762570105006
+  modified: 1762570105006
+  description: ""
+collection:
+  - name: Categoria
+    meta:
+      id: fld_eea716f4c9ef4054865266be4bf490e7
+      created: 1762570836018
+      modified: 1762570880875
+      sortKey: -1762570836318
+      description: ""
+    children:
+      - url: http://localhost:8080/categorias
+        name: Criar uma categoria
+        meta:
+          id: req_b6c5b60514a14126be567cbc1f93a8cb
+          created: 1762570139751
+          modified: 1762570943097
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883525
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Dermocosméticos",
+              "tipo": "Produtos para cuidados com a pele"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Listar todas as categorias
+        meta:
+          id: req_d727d8be6ae3440eb02c881e42839aa4
+          created: 1762570303594
+          modified: 1762571144367
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883475
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Buscar categoria por ID
+        meta:
+          id: req_f7ccc3fccce04ba391c6e0a62836474f
+          created: 1762570371433
+          modified: 1762570888340
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/tipo/Produtos
+        name: Buscar categoria por tipo
+        meta:
+          id: req_1ebafb9366564d5b848ad482836d8f39
+          created: 1762570396878
+          modified: 1762571198211
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883450
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Atualizar categoria
+        meta:
+          id: req_e616d60d065c4930823ee612c41f1e63
+          created: 1762570611432
+          modified: 1762570899590
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883425
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "id": 1,
+              "nome": "Medicamentos",
+              "tipo": "Remédios e tratamentos"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Deletar categoria
+        meta:
+          id: req_f974b28778f84180aa700ecd97140ef8
+          created: 1762570729313
+          modified: 1762570928488
+          isPrivate: false
+          description: ""
+          sortKey: -1762570882925
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "id": 1,
+              "nome": "Medicamentos",
+              "tipo": "Remédios e tratamentos"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produto
+    meta:
+      id: fld_5ff22007efb44d49b59a276af53231d1
+      created: 1762570917775
+      modified: 1762570917775
+      sortKey: -1761770764468.5
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: Criar um produto
+        meta:
+          id: req_93ab101c2181412097954ce0bac15ae7
+          created: 1762570917777
+          modified: 1762571607752
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883525
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "novalgina",
+            	"preco": 2.00,
+              "quantidade": 100,
+              "categoria": {
+                "id": 2
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Listar todas os produtos
+        meta:
+          id: req_ae283eb608c94725a220ccbdd3105e31
+          created: 1762570917779
+          modified: 1762571184452
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883475
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/3
+        name: Buscar produto por ID
+        meta:
+          id: req_58c4d97b3e824b7fb308ca19fca31dd5
+          created: 1762570917781
+          modified: 1762571845821
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/dip
+        name: Buscar produtos por nome
+        meta:
+          id: req_b575d73b18ee41c8b869aa3c4c536b3b
+          created: 1762570917783
+          modified: 1762571665679
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883450
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar produto
+        meta:
+          id: req_74bb53a4a8194c9cb615eef79b393e8b
+          created: 1762570917785
+          modified: 1762572126047
+          isPrivate: false
+          description: ""
+          sortKey: -1762570883425
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 4,
+              "nome": "Sabonete Antisséptico",
+            	"preco": 20.00,
+              "quantidade": 100,
+              "categoria": {
+                "id": 2
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/3
+        name: Deletar produto
+        meta:
+          id: req_da06f2041e364cf287ef176f25817c15
+          created: 1762570917787
+          modified: 1762571904437
+          isPrivate: false
+          description: ""
+          sortKey: -1762570882925
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_114ee36b1de85114a44497bcf79e5433103135c8
+    created: 1762570105011
+    modified: 1762570105011
+environments:
+  name: Base Environment
+  meta:
+    id: env_114ee36b1de85114a44497bcf79e5433103135c8
+    created: 1762570105009
+    modified: 1762570105009
+    isPrivate: false
